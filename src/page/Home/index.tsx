@@ -1,4 +1,4 @@
-import { Layout } from "../../components/Layout/Layout";
+import { Layout, MarginContainer } from "../../components/Layout/Layout";
 import CoverSlide from "./component/Cover";
 import Mission from "./component/Mission";
 import AboutUs from "./component/AboutUs";
@@ -10,10 +10,16 @@ const Home = () => {
     <Layout>
       <CoverSlide />
       <Mission />
-      <AboutUs />
+      <MarginContainer>
+        <AboutUs />
+      </MarginContainer>
       <PartnerSection />
-      <Dashboard />
-      <Other />
+      <MarginContainer>
+        <Dashboard />
+      </MarginContainer>
+      <MarginContainer>
+        <Other />
+      </MarginContainer>
     </Layout>
   );
 };

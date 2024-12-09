@@ -1,6 +1,7 @@
 import { Layout, MarginContainer } from "../../components/Layout/Layout";
 import { MarginGradientBox } from "../../components/Layout/Box";
 import Header from "../../components/Layout/Header";
+import MemberAccording from "./component/memberAccording";
 const Team = () => {
   const ImgTeamList = [
     "/picture/team/team1.jpg",
@@ -66,12 +67,12 @@ const Team = () => {
       <MarginContainer>
         <Header header="TEAM" />
         <MarginGradientBox>
-          <div className="px-9 py-7">
+          <div className="px-5 md:px-9 py-7">
             <div className="flex gap-2">
               {ImgTeamList.map((img, index) => (
                 <div
                   key={index}
-                  className={` h-96 rounded-xl bg-no-repeat bg-center bg-cover ${
+                  className={`h-32 md:h-52 lg:h-96 rounded-xl bg-no-repeat bg-center bg-cover ${
                     index === 1 ? "grow w-full" : "w-3/5 opacity-70"
                   } hover:opacity-100 hover:w-full transition-all duration-300`}
                   style={{ backgroundImage: `url(${img})` }}
@@ -79,23 +80,18 @@ const Team = () => {
               ))}
             </div>
 
-            <div className="text-sm my-5">
+            <div className="my-5">
               <p>{OurteamDescrib}</p>
             </div>
-            <div>
+
+            <div className="w-full">
               {TeamMemberDescrib.map((member, index) => (
-                <div className="px-2 py-3" key={index}>
-                  <div className="flex gap-4 bg-bgmain rounded-tl-3xl">
-                    <img
-                      src={member.picture}
-                      alt={member.name}
-                      className="rounded-full w-16 h-16"
-                    />
-                    <div className="w-4/5 py-3">
-                      <h4>{member.name}</h4>
-                      <p className="text-xs font-light">{member.describe}</p>
-                    </div>
-                  </div>
+                <div className="md:px-2 py-3" key={index}>
+                  <MemberAccording
+                    name={member.name}
+                    picture={member.picture}
+                    describe={member.describe}
+                  />
                 </div>
               ))}
             </div>
@@ -112,7 +108,7 @@ const Team = () => {
               {ImgCommunityList.map((img, index) => (
                 <div
                   key={index}
-                  className={` h-96 rounded-xl bg-no-repeat bg-center bg-cover ${
+                  className={`h-32 md:h-52 lg:h-96 rounded-xl bg-no-repeat bg-center bg-cover ${
                     index === 1 ? "grow w-full" : "w-3/5 opacity-70"
                   } hover:opacity-100 hover:w-full transition-all duration-300`}
                   style={{ backgroundImage: `url(${img})` }}

@@ -32,20 +32,22 @@ const CoverSlide: React.FC = () => {
       <div className="flex flex-col absolute top-0 left-0 w-screen h-screen items-center justify-center p-4 md:p-0">
         {/* Welcome Text */}
         <div className="text-white text-2xl md:text-4xl font-bold drop-shadow-lg mb-4 md:mb-6">
-          Welcome To
+          <h4>Welcome To</h4>
         </div>
         {/* Project Name */}
-        <div className="text-white text-5xl md:text-8xl font-bold drop-shadow-2xl">
-          Project FireFly
+        <div className="text-white text-4xl md:text-8xl font-bold drop-shadow-lg">
+          <h1>Project FireFly</h1>
         </div>
         {/* Gradient Text */}
-        <div className="drop-shadow-2xl mt-8 md:mt-12 bg-opacity-10 bg-black px-8 md:px-48 py-2">
+        <div className="drop-shadow-2xl mt-8 md:mt-12 bg-opacity-40 bg-black px-5 md:px-48 py-8 rounded-md">
           <div className="gradient-text text-xl md:text-2xl font-semibold inline-block">
-            {texts[currentIndex % Object.keys(covertext).length]}
+            <p className="text-center">
+              {texts[currentIndex % Object.keys(covertext).length]}
+            </p>
           </div>
         </div>
         <button className="text-white text-lg md:text-xl font-semibold mt-6 md:mt-10 border-2 bg-black bg-opacity-40 rounded-lg px-4 md:px-8 py-4 md:py-5 hover:inline-block hover:gradient-text hover:bg-opacity-10 transition-colors duration-300">
-          GET TO KNOW US
+          <p>GET TO KNOW US</p>
         </button>
       </div>
     </div>

@@ -19,5 +19,5 @@ export const MarginContainer = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return <div className="mx-40">{children}</div>;
+  return <div className="mx-12 md:mx-24 lg:mx-40">{children}</div>;
 };

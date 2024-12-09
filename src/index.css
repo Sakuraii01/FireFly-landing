@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+  p{
+    @apply text-sm md:text-base
+  }
+}
 body {
   background: #f5f4f8;
 }

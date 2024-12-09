@@ -1,11 +1,13 @@
 const OnDeveloping = () => {
   return (
-    <div className="bg-white rounded-xl py-10">
-      <div className="flex gap-5 justify-center">
-        <img src="/picture/coding.png" className="h-48"></img>
-        <div className="mt-4">
-          <h1 className="text-[60px] font-bold text-navtext">SORRY</h1>
-          <h4 className="text-xl gradient-text2">
+    <div className="bg-white rounded-xl py-10 px-3">
+      <div className="flex justify-center">
+        <img src="/picture/coding.png" className="h-32 md:h-48"></img>
+        <div className="mt-4 ml-3">
+          <h1 className="text-3xl md:text-[60px] font-bold text-navtext w-fit">
+            SORRY
+          </h1>
+          <h4 className="text-sm md:text-xl gradient-text2 w-fit">
             This page is on Developing.
           </h4>
         </div>

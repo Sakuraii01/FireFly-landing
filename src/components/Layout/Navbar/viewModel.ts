@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PATH } from "../../../constants/path.route";
+import { useCallback } from "react";
 const useViewModel = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isDrawer, setIsDrawer] = useState(false);
   const NavItem = [
     {
       name: "HOME",
@@ -34,17 +35,23 @@ const useViewModel = () => {
       path: PATH.NEWS,
     },
   ];
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (window.scrollY > 50) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
     }
+  }, []);
+
+  const handleDrawer = (drawer: boolean) => {
+    setIsDrawer(drawer);
   };
 
   return {
     NavItem,
     isScrolled,
+    isDrawer,
+    handleDrawer,
     handleScroll,
     useNavigate,
   };

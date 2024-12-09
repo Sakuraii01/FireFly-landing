@@ -13,29 +13,26 @@ export const Logo = [
   "/partnerlogo/Apnic.png",
 ];
 
+const landingdecorationPath = "/picture/landing-decor/";
 export const cardData = [
   {
-    title: "drone",
-    image: "/cardimage/1.png",
+    image: landingdecorationPath + "drone.png",
     description: "UAV-Based system for remote area surveying",
   },
   {
-    image: "/cardimage/groundIOT 1.png",
+    image: landingdecorationPath + "station.png",
     description: "Design of ground-based IoT sensors for smoke detection",
   },
   {
-    title: "Robust",
-    image: "/cardimage/heroicons_signal-solid.png",
+    image: landingdecorationPath + "signal.png",
     description: "Robust communication channels between UAVs and IoT sensors",
   },
   {
-    title: "AI",
-    image: "/cardimage/streamline_ai-navigation-spark.png",
+    image: landingdecorationPath + "navigate.png",
     description: "Machine learning algorithms for fire prediction",
   },
   {
-    title: "Real-time",
-    image: "/cardimage/point.png",
+    image: landingdecorationPath + "navigate2.png",
     description: "Real-time data visualization dashboard",
   },
 ];

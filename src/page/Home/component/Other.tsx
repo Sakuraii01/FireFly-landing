@@ -1,14 +1,13 @@
 import React from "react";
 import { OtherData } from "../../../constants/images";
+import Header from "../../../components/Layout/Header";
 
 const Other: React.FC = () => {
   return (
-    <div className="mx-auto max-w-xx p-4">
-      <div className="text-lg w-full text-start">
-        {/* Title */}
-        <h2 className="text-navtext text-start mb-4 font-light">Other</h2>
-      </div>
-      <div className="flex flex-col md:flex-row w-full gap-6">
+    <div>
+      {/* Title */}
+      <Header header="OTHERs" topic=" " />
+      <div className="md:flex gap-6">
         {OtherData.map((item, index) => (
           <div key={index} className="mb-10 w-full md:w-1/2 lg:w-1/3">
             <div className="relative">

@@ -56,7 +56,7 @@ const Gallery = () => {
       <MarginContainer>
         <Header header="GALLERY" />
         <MarginGradientBox>
-          <div className="px-10 py-7">
+          <div className="px-6 md:px-10 py-7">
             <p>{galleryDescribe}</p>
             <div>
               {gallery.map((item, index) => (
@@ -74,7 +74,8 @@ const Gallery = () => {
                     </div>
                     <p className="my-3">{item.describe}</p>
                   </div>
-                  <div className="grid grid-cols-6 gap-2">
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-2">
                     {item.picture.map((picture, key) => (
                       <div
                         key={key}
